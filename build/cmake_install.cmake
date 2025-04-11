@@ -1,4 +1,4 @@
-# Install script for directory: /home/mycoder/myProjects/muduo-core
+# Install script for directory: /home/coder/my-muduo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/mycoder/myProjects/muduo-core/build/src/cmake_install.cmake")
-  include("/home/mycoder/myProjects/muduo-core/build/example/cmake_install.cmake")
+  include("/home/coder/my-muduo/build/src/cmake_install.cmake")
+  include("/home/coder/my-muduo/build/example/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mycoder/myProjects/muduo-core/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/coder/my-muduo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -3,7 +3,9 @@
 #include "Logger.h"
 #include "Timestamp.h"
 
-// 获取日志唯一的实例对象 单例
+// 获取日志唯一的实例对象 单例，返回引用
+//instance()是线程安全，饿汉模式，用到了再静态局部变量初始化，
+//只有第一个线程会执行 logger 的初始化，其他线程会等待初始化完成后再访问。
 Logger &Logger::instance()
 {
     static Logger logger;

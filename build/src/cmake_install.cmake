@@ -1,4 +1,4 @@
-# Install script for directory: /home/mycoder/myProjects/muduo-core/src
+# Install script for directory: /home/coder/my-muduo/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

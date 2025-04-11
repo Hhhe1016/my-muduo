@@ -200,7 +200,7 @@ string
 
 ../include/noncopyable.h
 
-/home/mycoder/myProjects/muduo-core/src/Acceptor.cc
+/home/coder/my-muduo/src/Acceptor.cc
 sys/types.h
 -
 sys/socket.h
@@ -210,13 +210,13 @@ errno.h
 unistd.h
 -
 Acceptor.h
-/home/mycoder/myProjects/muduo-core/src/Acceptor.h
+/home/coder/my-muduo/src/Acceptor.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 InetAddress.h
-/home/mycoder/myProjects/muduo-core/src/InetAddress.h
+/home/coder/my-muduo/src/InetAddress.h
 
-/home/mycoder/myProjects/muduo-core/src/Buffer.cc
+/home/coder/my-muduo/src/Buffer.cc
 errno.h
 -
 sys/uio.h
@@ -224,31 +224,31 @@ sys/uio.h
 unistd.h
 -
 Buffer.h
-/home/mycoder/myProjects/muduo-core/src/Buffer.h
+/home/coder/my-muduo/src/Buffer.h
 
-/home/mycoder/myProjects/muduo-core/src/Channel.cc
+/home/coder/my-muduo/src/Channel.cc
 sys/epoll.h
 -
 Channel.h
-/home/mycoder/myProjects/muduo-core/src/Channel.h
+/home/coder/my-muduo/src/Channel.h
 EventLoop.h
-/home/mycoder/myProjects/muduo-core/src/EventLoop.h
+/home/coder/my-muduo/src/EventLoop.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 
-/home/mycoder/myProjects/muduo-core/src/CurrentThread.cc
+/home/coder/my-muduo/src/CurrentThread.cc
 CurrentThread.h
-/home/mycoder/myProjects/muduo-core/src/CurrentThread.h
+/home/coder/my-muduo/src/CurrentThread.h
 
-/home/mycoder/myProjects/muduo-core/src/DefaultPoller.cc
+/home/coder/my-muduo/src/DefaultPoller.cc
 stdlib.h
 -
 Poller.h
-/home/mycoder/myProjects/muduo-core/src/Poller.h
+/home/coder/my-muduo/src/Poller.h
 EPollPoller.h
-/home/mycoder/myProjects/muduo-core/src/EPollPoller.h
+/home/coder/my-muduo/src/EPollPoller.h
 
-/home/mycoder/myProjects/muduo-core/src/EPollPoller.cc
+/home/coder/my-muduo/src/EPollPoller.cc
 errno.h
 -
 unistd.h
@@ -256,13 +256,13 @@ unistd.h
 string.h
 -
 EPollPoller.h
-/home/mycoder/myProjects/muduo-core/src/EPollPoller.h
+/home/coder/my-muduo/src/EPollPoller.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 Channel.h
-/home/mycoder/myProjects/muduo-core/src/Channel.h
+/home/coder/my-muduo/src/Channel.h
 
-/home/mycoder/myProjects/muduo-core/src/EventLoop.cc
+/home/coder/my-muduo/src/EventLoop.cc
 sys/eventfd.h
 -
 unistd.h
@@ -274,55 +274,55 @@ errno.h
 memory
 -
 EventLoop.h
-/home/mycoder/myProjects/muduo-core/src/EventLoop.h
+/home/coder/my-muduo/src/EventLoop.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 Channel.h
-/home/mycoder/myProjects/muduo-core/src/Channel.h
+/home/coder/my-muduo/src/Channel.h
 Poller.h
-/home/mycoder/myProjects/muduo-core/src/Poller.h
+/home/coder/my-muduo/src/Poller.h
 
-/home/mycoder/myProjects/muduo-core/src/EventLoopThread.cc
+/home/coder/my-muduo/src/EventLoopThread.cc
 EventLoopThread.h
-/home/mycoder/myProjects/muduo-core/src/EventLoopThread.h
+/home/coder/my-muduo/src/EventLoopThread.h
 EventLoop.h
-/home/mycoder/myProjects/muduo-core/src/EventLoop.h
+/home/coder/my-muduo/src/EventLoop.h
 
-/home/mycoder/myProjects/muduo-core/src/EventLoopThreadPool.cc
+/home/coder/my-muduo/src/EventLoopThreadPool.cc
 memory
 -
 EventLoopThreadPool.h
-/home/mycoder/myProjects/muduo-core/src/EventLoopThreadPool.h
+/home/coder/my-muduo/src/EventLoopThreadPool.h
 EventLoopThread.h
-/home/mycoder/myProjects/muduo-core/src/EventLoopThread.h
+/home/coder/my-muduo/src/EventLoopThread.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 
-/home/mycoder/myProjects/muduo-core/src/InetAddress.cc
+/home/coder/my-muduo/src/InetAddress.cc
 strings.h
 -
 string.h
 -
 InetAddress.h
-/home/mycoder/myProjects/muduo-core/src/InetAddress.h
+/home/coder/my-muduo/src/InetAddress.h
 iostream
 -
 
-/home/mycoder/myProjects/muduo-core/src/Logger.cc
+/home/coder/my-muduo/src/Logger.cc
 iostream
 -
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 Timestamp.h
-/home/mycoder/myProjects/muduo-core/src/Timestamp.h
+/home/coder/my-muduo/src/Timestamp.h
 
-/home/mycoder/myProjects/muduo-core/src/Poller.cc
+/home/coder/my-muduo/src/Poller.cc
 Poller.h
-/home/mycoder/myProjects/muduo-core/src/Poller.h
+/home/coder/my-muduo/src/Poller.h
 Channel.h
-/home/mycoder/myProjects/muduo-core/src/Channel.h
+/home/coder/my-muduo/src/Channel.h
 
-/home/mycoder/myProjects/muduo-core/src/Socket.cc
+/home/coder/my-muduo/src/Socket.cc
 unistd.h
 -
 sys/types.h
@@ -336,13 +336,13 @@ netinet/tcp.h
 sys/socket.h
 -
 Socket.h
-/home/mycoder/myProjects/muduo-core/src/Socket.h
+/home/coder/my-muduo/src/Socket.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 InetAddress.h
-/home/mycoder/myProjects/muduo-core/src/InetAddress.h
+/home/coder/my-muduo/src/InetAddress.h
 
-/home/mycoder/myProjects/muduo-core/src/TcpConnection.cc
+/home/coder/my-muduo/src/TcpConnection.cc
 functional
 -
 string
@@ -364,39 +364,39 @@ fcntl.h
 unistd.h
 -
 TcpConnection.h
-/home/mycoder/myProjects/muduo-core/src/TcpConnection.h
+/home/coder/my-muduo/src/TcpConnection.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 Socket.h
-/home/mycoder/myProjects/muduo-core/src/Socket.h
+/home/coder/my-muduo/src/Socket.h
 Channel.h
-/home/mycoder/myProjects/muduo-core/src/Channel.h
+/home/coder/my-muduo/src/Channel.h
 EventLoop.h
-/home/mycoder/myProjects/muduo-core/src/EventLoop.h
+/home/coder/my-muduo/src/EventLoop.h
 
-/home/mycoder/myProjects/muduo-core/src/TcpServer.cc
+/home/coder/my-muduo/src/TcpServer.cc
 functional
 -
 string.h
 -
 TcpServer.h
-/home/mycoder/myProjects/muduo-core/src/TcpServer.h
+/home/coder/my-muduo/src/TcpServer.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/src/Logger.h
+/home/coder/my-muduo/src/Logger.h
 TcpConnection.h
-/home/mycoder/myProjects/muduo-core/src/TcpConnection.h
+/home/coder/my-muduo/src/TcpConnection.h
 
-/home/mycoder/myProjects/muduo-core/src/Thread.cc
+/home/coder/my-muduo/src/Thread.cc
 Thread.h
-/home/mycoder/myProjects/muduo-core/src/Thread.h
+/home/coder/my-muduo/src/Thread.h
 CurrentThread.h
-/home/mycoder/myProjects/muduo-core/src/CurrentThread.h
+/home/coder/my-muduo/src/CurrentThread.h
 semaphore.h
 -
 
-/home/mycoder/myProjects/muduo-core/src/Timestamp.cc
+/home/coder/my-muduo/src/Timestamp.cc
 time.h
 -
 Timestamp.h
-/home/mycoder/myProjects/muduo-core/src/Timestamp.h
+/home/coder/my-muduo/src/Timestamp.h
 

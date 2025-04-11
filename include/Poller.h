@@ -13,7 +13,7 @@ class EventLoop;
 class Poller
 {
 public:
-    using ChannelList = std::vector<Channel *>;
+    using ChannelList = std::vector<Channel *>; //这就是一个临时容器，用于存储当前触发了事件的channel对象，用于通知/交给eventloop去处理这些事件
 
     Poller(EventLoop *loop);
     virtual ~Poller() = default;

@@ -8,7 +8,7 @@
 
 const int kNew = -1;    // 某个channel还没添加至Poller          // channel的成员index_初始化为-1
 const int kAdded = 1;   // 某个channel已经添加至Poller
-const int kDeleted = 2; // 某个channel已经从Poller删除
+const int kDeleted = 2; // 某个channel已经从Poller删除  //其实这个没咋用到
 
 EPollPoller::EPollPoller(EventLoop *loop)
     : Poller(loop)
@@ -50,7 +50,7 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
     }
     else
     {
-        if (saveErrno != EINTR)
+        if (saveErrno != EINTR)//EINTR 是一个特殊的错误码，表示系统调用被信号中断（Interrupted system call），是正常错误，这里就当出现其他错误的时候才log
         {
             errno = saveErrno;
             LOG_ERROR("EPollPoller::poll() error!");
@@ -97,7 +97,14 @@ void EPollPoller::updateChannel(Channel *channel)
 void EPollPoller::removeChannel(Channel *channel)
 {
     int fd = channel->fd();
-    channels_.erase(fd);
+    // 检查 fd 是否存在于 channels_ 中
+    auto it = channels_.find(fd);
+    if (it != channels_.end()) {
+        channels_.erase(it); // 从 channels_ 中移除
+    } else {
+        LOG_ERROR("func=%s => fd=%d not found in channels_\n", __FUNCTION__, fd);
+        return; // 如果 fd 不存在，直接返回
+    }
 
     LOG_INFO("func=%s => fd=%d\n", __FUNCTION__, fd);
 
@@ -109,7 +116,8 @@ void EPollPoller::removeChannel(Channel *channel)
     channel->set_index(kNew);
 }
 
-// 填写活跃的连接
+// 填写活跃的连接，实际上并不是创建了一个新的channel,而是events_[i].data.ptr是早就注册过的，这个channel已经有过
+//只是又对这个channel进行了revents事件的注册操作,再给
 void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels) const
 {
     for (int i = 0; i < numEvents; ++i)
@@ -124,7 +132,7 @@ void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels)
 void EPollPoller::update(int operation, Channel *channel)
 {
     epoll_event event;
-    ::memset(&event, 0, sizeof(event));
+    ::memset(&event, 0, sizeof(event)); //将 event 结构体的所有字节初始化为 0，确保其内容是干净的，避免使用未初始化的值
 
     int fd = channel->fd();
 

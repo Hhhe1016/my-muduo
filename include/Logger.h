@@ -3,7 +3,7 @@
 #include <string>
 
 #include "noncopyable.h"
-
+//这里就是宏定义
 // LOG_INFO("%s %d", arg1, arg2)
 #define LOG_INFO(logmsgFormat, ...)                       \
     do                                                    \
@@ -61,7 +61,7 @@ enum LogLevel
 
 // 输出一个日志类
 
-class Logger : noncopyable
+class Logger : noncopyable //logger继承了noncopyable是不可拷贝的类
 {
 public:
     // 获取日志唯一的实例对象 单例

@@ -150,11 +150,11 @@ string
 
 ../include/noncopyable.h
 
-/home/mycoder/myProjects/muduo-core/example/testserver.cc
+/home/coder/my-muduo/example/testserver.cc
 string
 -
 TcpServer.h
-/home/mycoder/myProjects/muduo-core/example/TcpServer.h
+/home/coder/my-muduo/example/TcpServer.h
 Logger.h
-/home/mycoder/myProjects/muduo-core/example/Logger.h
+/home/coder/my-muduo/example/Logger.h
 

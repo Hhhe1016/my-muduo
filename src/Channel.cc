@@ -37,20 +37,21 @@ void Channel::tie(const std::shared_ptr<void> &obj)
 }
 //update 和remove => EpollPoller 更新channel在poller中的状态
 /**
- * 当改变channel所表示的fd的events事件后，update负责再poller里面更改fd相应的事件epoll_ctl
+ * 当改变channel所表示的fd的events事件后，update负责在poller里面更改fd相应的事件epoll_ctl
  **/
 void Channel::update()
 {
-    // 通过channel所属的eventloop，调用poller的相应方法，注册fd的events事件
+    // 通过channel所属的eventloop，调用poller的相应方法，注册fd感兴趣的events事件
     loop_->updateChannel(this);
 }
 
-// 在channel所属的EventLoop中把当前的channel删除掉
+// 在channel所属的EventLoop中把当前的channel删除掉，跟update的途径是一样的
 void Channel::remove()
 {
     loop_->removeChannel(this);
 }
 
+//handleEvent和handleEventWithGuard实现的是根据目前fd上发生的事件进而调用相应的函数
 void Channel::handleEvent(Timestamp receiveTime)
 {
     if (tied_)
@@ -68,6 +69,7 @@ void Channel::handleEvent(Timestamp receiveTime)
     }
 }
 
+//就是判断revent是什么事情，就调用对应的回调函数执行。
 void Channel::handleEventWithGuard(Timestamp receiveTime)
 {
     LOG_INFO("channel handleEvent revents:%d\n", revents_);
@@ -78,7 +80,7 @@ void Channel::handleEventWithGuard(Timestamp receiveTime)
         {
             closeCallback_();
         }
-    }
+   } 
     // 错误
     if (revents_ & EPOLLERR)
     {

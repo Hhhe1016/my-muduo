@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "../../lib/libmuduo_core.pdb"
-  "../../lib/libmuduo_core.so"
   "CMakeFiles/muduo_core.dir/Acceptor.cc.o"
   "CMakeFiles/muduo_core.dir/Buffer.cc.o"
   "CMakeFiles/muduo_core.dir/Channel.cc.o"
@@ -18,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/muduo_core.dir/TcpServer.cc.o"
   "CMakeFiles/muduo_core.dir/Thread.cc.o"
   "CMakeFiles/muduo_core.dir/Timestamp.cc.o"
+  "../../lib/libmuduo_core.pdb"
+  "../../lib/libmuduo_core.so"
 )
 
 # Per-language clean rules from dependency scanning.
