@@ -6,6 +6,7 @@
 namespace CurrentThread
 {
     extern __thread int t_cachedTid; // 保存tid缓存 因为系统调用非常耗时 拿到tid后将其保存
+    //__thread 是关键字,作用是让每个线程都有自己独立的 t_cachedTid 变量副本，线程之间互不干扰。
 
     void cacheTid();
 

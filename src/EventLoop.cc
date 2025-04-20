@@ -9,8 +9,8 @@
 #include "Channel.h"
 #include "Poller.h"
 
-// 防止一个线程创建多个EventLoop
-__thread EventLoop *t_loopInThisThread = nullptr;
+// 防止一个线程创建多个EventLoop,one loop per thread。修改了__thread
+thread_local EventLoop *t_loopInThisThread = nullptr;
 
 // 定义默认的Poller IO复用接口的超时时间
 const int kPollTimeMs = 10000; // 10000毫秒 = 10秒钟

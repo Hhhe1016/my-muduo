@@ -51,6 +51,8 @@ void EventLoopThread::threadFunc()
         cond_.notify_one();
     }
     loop.loop();    // 执行EventLoop的loop() 开启了底层的Poller的poll()
+
+    //【最后两行是在eventloop执行quit()之后，要销毁eventloop才会执行到下面的】
     std::unique_lock<std::mutex> lock(mutex_);
-    loop_ = nullptr;
+    loop_ = nullptr; //防止悬空指针
 }
